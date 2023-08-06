@@ -1,0 +1,89 @@
+body{
+    background-color: aliceblue;
+
+}
+#navbar{
+    border: 1px solid black;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #444343;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    /* overflow: scroll; */
+}
+#navbar>div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: 35%; */
+}
+input{
+    width: 350px;
+    /* border: none; */
+    height: 30px;
+}
+
+a{
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #12c9c9;
+}
+
+#icon{
+    /* margin: 0px 20px; */
+    background-color: gray;
+    height: 30px;
+    width: 30px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+input:hover+#icon{
+    border: 2px solid black;
+    border-radius: 7px;
+}
+#movies_data{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5%;
+    padding: 20px;
+    padding-bottom: 150px;
+}
+#movies_data>div{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+}
+#movies_data>div>img{
+    width: 100%;
+}
+h1{
+    text-align: center;
+    /* color: white; */
+
+}
+.button_div{
+    display: flex;
+    justify-content: space-evenly;
+}
+button{
+    color: white;
+    background-color: black;
+    /* border: none; */
+    gap: 2px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px;
+}
+button:hover{
+    cursor: pointer;
+}
