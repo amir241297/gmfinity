@@ -104,9 +104,9 @@ app.post("/login", async (req, res) => {
 
 app.get("/fetchallpublicPlayListData", async (req, res) => {
     try {
-        let data = await PublicPlayListModel.find()
-        res.send({ "response": data })
-        console.log({ "response": data })
+        let data = await PublicPlayListModel.find();
+        res.send("working")
+        console.log("working")
     } catch (err) {
         res.send({ "Error While getting Public PlayList Data": err })
         console.log("Error While getting Public PlayList Data", err)
