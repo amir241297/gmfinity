@@ -5,6 +5,7 @@ const cors = require('cors')
 const { connection } = require("./db")
 const bcrypt = require('bcrypt')
 const jwt = require("jsonwebtoken")
+require('dotenv').config({path:'./configs/.env'})
 
 const {authenticate}=require("./middleware/authentication")
 const { CreateAccountModel } = require("./model/create_account_model")
@@ -130,8 +131,8 @@ app.get("/fetchPrivatePlayListData", async(req, res) => {
         console.log("Error While getting Public PlayList Data", err)
     }
 })
-
-app.listen(3500, async () => {
+  
+app.listen(process.env.PORT, async () => {
     try {
         await connection
         console.log("Server Connected to DB")

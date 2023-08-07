@@ -1,5 +1,3 @@
-// import {isAuth} from "./login.js"
-// console.log("isAuth",isAuth)
 
 // Enter Key
 let input_tag = document.getElementById("queries")
@@ -13,7 +11,7 @@ input_tag.addEventListener("keypress", (event) => {
 
 // Debouncing 
 let id
-const debounce = (fetchData, delay) => {
+const debounce = (delay) => {
     if (id) clearInterval(id)
     id = setTimeout(() => {
         getData()
@@ -98,7 +96,7 @@ const appendData = (data = 0) => {
 
 }
 // fetch Data
-const fetchData = async (queries) => {
+const fetchData = async (queries="movies") => {
     let url = `https://www.omdbapi.com/?apikey=c6c349ef&s=${queries}`
     try {
         let res = await fetch(url)
@@ -116,4 +114,4 @@ const getData = () => {
     fetchData(res)
 
 }
-fetchData("movies")
+fetchData()

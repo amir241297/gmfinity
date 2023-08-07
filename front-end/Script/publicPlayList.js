@@ -25,7 +25,7 @@ const appendData = (data = 0) => {
 }
 appendData()
 const fetchData = async (queries) => {
-    let url = `https://tough-bracelet-toad.cyclic.app/fetchallpublicPlayListData`
+    let url = `http://localhost:3500/fetchallpublicPlayListData`
     try {
         let res = await fetch(url)
         res = await res.json()
