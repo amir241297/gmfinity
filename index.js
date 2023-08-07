@@ -112,6 +112,12 @@ app.get("/fetchallpublicPlayListData", async (req, res) => {
         console.log("Error While getting Public PlayList Data", err)
     }
 })
+app.get("/",async(req,res)=>{
+    try{
+        console.log("akhi");
+        res.send("akhil")
+    }catch(error){console.log(error);res.send(error)}
+})
 
 // app.use(authenticate)
 app.get("/fetchPrivatePlayListData", async(req, res) => {
