@@ -12,7 +12,7 @@ const { PrivatePlayListModel } = require("./model/private_playList_model")
 const { PublicPlayListModel } = require("./model/public_playList_model")
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({origin:"*",}))
 
 
 app.post("/addPublicPlaylistData", async (req, res) => {
@@ -105,8 +105,8 @@ app.post("/login", async (req, res) => {
 app.get("/fetchallpublicPlayListData", async (req, res) => {
     try {
         let data = await PublicPlayListModel.find();
-        res.send("working")
-        console.log("working")
+        res.send({"response":data})
+        console.log({"response":data})
     } catch (err) {
         res.send({ "Error While getting Public PlayList Data": err })
         console.log("Error While getting Public PlayList Data", err)
